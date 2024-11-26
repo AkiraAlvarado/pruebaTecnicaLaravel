@@ -17,7 +17,8 @@ class ProductResource extends JsonResource
         return[
         'id' =>$this->id,
         'name' => $this->name,
-        'details' => $this->when($request->routeIs('products:show'), $this->details),
+        'image' => $this->image,
+        'details' => $this->details,
         'price'=> $this->price,
         'establisment_id' => $this->establisment  
         ];
